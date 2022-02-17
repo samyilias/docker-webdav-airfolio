@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build ./2.4 --tag ilias-webdav 
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/ilias-webdav:latest
+      run: docker push ilias2323/ilias-webdav:latest
