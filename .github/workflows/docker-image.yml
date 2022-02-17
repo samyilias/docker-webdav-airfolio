@@ -5,8 +5,6 @@ name: Docker Image CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
 
@@ -23,6 +21,6 @@ jobs:
       run: |
           docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build ./2.4 --tag ilias-webdav
+      run: docker build ./2.4 --tag 2.4.1
     - name: Docker Push
-      run: docker push ilias2323/ilias-webdav:latest
+      run: docker push ${{secrets.DOCKER_USER}}/ilias-webdav:2.4.1
