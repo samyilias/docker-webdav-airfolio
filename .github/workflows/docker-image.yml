@@ -25,4 +25,4 @@ jobs:
           context: ./2.4
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: user/ilias-webdav:latest
+          tags: ilias2323/ilias-webdav:latest
